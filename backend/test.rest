@@ -12,31 +12,23 @@ POST http://localhost:3333/api/users/auth
 Content-Type: application/json
 
 {
-    "poruka": "login"
+    "email": "jek@gmail.com",
+    "password": "jek@gmail.com"
 }
 
 ###
 POST http://localhost:3333/api/users/logout
 Content-Type: application/json
 
-{
-    "poruka": "logout"
-}
-
 ###
 GET http://localhost:3333/api/users/profile
-Content-Type: application/json
-
-{
-    "poruka": "profile"
-}
 
 ###
 PUT http://localhost:3333/api/users/profile
 Content-Type: application/json
 
 {
-    "poruka": "updated"
-}
+    "email": "jek@gmail.com"
+    }
 
 ###

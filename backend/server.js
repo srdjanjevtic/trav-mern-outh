@@ -1,6 +1,7 @@
 import dontenv from "dotenv";
 import express from "express";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 dontenv.config();
 import { notFound, errorHandler } from "./middleware/errorHandler.js";
 import connectDB from "./config/db.js";
@@ -13,6 +14,7 @@ connectDB();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 app.use(cors());
 
 app.use("/api/users", userRoutes);
